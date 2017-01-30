@@ -16,12 +16,39 @@
 	<!-- dynamic include --- content changes a lot -->
 	<jsp:include page="updates.txt" />
 
-
 	<!-- Must use static include if it's java code in it that we want to access	 -->
-
 	<%@ include file="variables.jsp"%>
 	<%=name%>
 
+	<!-- Must use include jsp tag if you don't know what file you want till run time -->
+	<%
+		String id = request.getParameter("id");
+	%>
 
+	<%
+		if (id == null) {
+	%>
+
+	<jsp:include page="idnotfound.html" />
+
+	<%
+		} else {
+	%>
+
+	<jsp:include page="idfound.html" />
+
+	<%
+		}
+	%>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
