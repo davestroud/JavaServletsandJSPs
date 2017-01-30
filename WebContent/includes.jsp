@@ -8,8 +8,11 @@
 </head>
 <body>
 
-
+<!-- static include --- content changes infrequently-->
 <%@ include file="copyright.txt" %>
+
+<!-- dynamic include --- content changes a lot -->
+<jsp:include page="updates.txt"/>
 
 </body>
 </html>
