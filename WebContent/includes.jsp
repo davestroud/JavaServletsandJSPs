@@ -8,5 +8,8 @@
 </head>
 <body>
 
+
+<%@ include file="copyright.txt" %>
+
 </body>
 </html>
