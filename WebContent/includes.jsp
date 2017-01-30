@@ -16,9 +16,13 @@
 	<!-- dynamic include --- content changes a lot -->
 	<jsp:include page="updates.txt" />
 
+	<p />
+
 	<!-- Must use static include if it's java code in it that we want to access	 -->
 	<%@ include file="variables.jsp"%>
 	<%=name%>
+
+	<p />
 
 	<!-- Must use include jsp tag if you don't know what file you want till run time -->
 	<%
@@ -42,13 +46,3 @@
 	%>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
