@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,11 +8,20 @@
 </head>
 <body>
 
-<!-- static include --- content changes infrequently-->
-<%@ include file="copyright.txt" %>
+	<!-- static include --- content changes infrequently-->
+	<%@ include file="copyright.txt"%>
 
-<!-- dynamic include --- content changes a lot -->
-<jsp:include page="updates.txt"/>
+	<p />
+
+	<!-- dynamic include --- content changes a lot -->
+	<jsp:include page="updates.txt" />
+
+
+	<!-- Must use static include if it's java code in it that we want to access	 -->
+
+	<%@ include file="variables.jsp"%>
+	<%=name%>
+
 
 </body>
 </html>
